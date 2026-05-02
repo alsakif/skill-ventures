@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-hero: "Archivo Black", sans-serif;
+  --font-logo: "Montserrat", sans-serif;
+  --color-brand-pink: #E61D56;
+}
+
+:root {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: var(--color-brand-pink);
+  color: #fff;
+}
+
+/* Custom outline text for the cinematic look */
+.outline-text {
+  color: transparent; 
+  -webkit-text-stroke: 1px #ffffff;
+  text-transform: uppercase;
+  font-family: var(--font-hero);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.outline-text-small {
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.outline-text:hover {
+  -webkit-text-stroke: 2px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
